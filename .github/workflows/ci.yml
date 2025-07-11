@@ -25,6 +25,9 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test -DsuiteXmlFile=testng.xml
 
+      - name: List test-output contents
+        run: ls -l test-output || echo "test-output not found"
+
       - name: Upload TestNG report
         uses: actions/upload-artifact@v4
         with:
