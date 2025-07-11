@@ -1,9 +1,9 @@
 name: Run Selenium Tests
 
 on:
-  workflow_dispatch:  # Allows manual trigger from GitHub
+  workflow_dispatch:
   push:
-    branches: [ main ]  # or master if that's your branch
+    branches: [ master ]
 
 jobs:
   test:
@@ -25,7 +25,7 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test
 
-        - name: Upload TestNG report
+      - name: Upload TestNG report
         uses: actions/upload-artifact@v4
         with:
           name: test-output
