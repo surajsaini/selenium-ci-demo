@@ -1,0 +1,26 @@
+name: Run Selenium Tests
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub
+  push:
+    branches: [ main ]  # or master if that's your branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Run tests with Maven
+        run: mvn clean test
