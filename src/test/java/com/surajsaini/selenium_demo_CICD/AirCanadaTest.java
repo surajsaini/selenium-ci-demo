@@ -49,7 +49,7 @@ public class AirCanadaTest {
 	public void openAirCanadaWebsite() throws InterruptedException {
 		System.out.println("Test: Open Air Canada Website");
 		driver.get("https://www.aircanada.com");
-		Assert.assertEquals(getText(), "Where can we take?");
+		Assert.assertEquals(getText(), "Where can we take you?");
 	}
 
 	@AfterTest
