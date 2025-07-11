@@ -22,6 +22,9 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@v1
 
+      - name: Create test-output directory (Temporary)
+        run: mkdir -p test-output
+
       - name: Run tests with Maven
         run: mvn clean test -DsuiteXmlFile=testng.xml
 
