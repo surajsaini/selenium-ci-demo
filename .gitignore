@@ -1,0 +1,21 @@
+# Ignore Maven build output
+target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IntelliJ files (in case you switch IDE)
+.idea/
+*.iml
+
+# Test reports
+test-output/
